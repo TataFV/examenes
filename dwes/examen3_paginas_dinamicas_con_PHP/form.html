@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            border: 2px solid grey;
+            padding-top: 6px;
+            padding-bottom: 20px;
+            width: 600px;
+        }
+
+        #data {
+            background-color: white;
+            width: 125px;
+            margin-top: -20px;
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+
+        form {
+            margin-left: 30px;
+            margin-top: -10px;
+        }
+
+        input#day {
+            width: 50px;
+        }
+
+        input#year {
+            width: 75px;
+        }
+    </style>
+    <title>Pagina dinámica con formulario</title>
+</head>
+
+<body>
+    <h3>Rellena tu CV</h3>
+    <div>
+        <p id="data">Datos personales</p>
+        <!--- FORMULARIO --->
+        <form action="form.php" method="post">
+            <!--- Provincia --->
+            <label for="provincia">Provincia</label><br />
+            <select name="provincia" id="provincia">
+                <option value="">Selecciona una provincia</option>
+                <option value="A Coruña">A Coruña</option>
+                <option value="Lugo">Lugo</option>
+                <option value="Ourense">Ourense</option>
+                <option value="Pontevedra">Pontevedra</option>
+            </select><br><br>
+            <!--- Fecha de nacimiento --->
+            <label for="birthdate">Fecha de Nacimiento</label><br />
+            <label for="day"></label>
+            <input type="text" id="day" name="day" value="">
+            <span>de</span>
+            <select name="month" id="month">
+                <option value="">mes</option>
+                <option value="Enero">Enero</option>
+                <option value="Febrero">Febrero</option>
+                <option value="Marzo">Marzo</option>
+                <option value="Abril">Abril</option>
+                <option value="Mayo">Mayo</option>
+                <option value="Junio">Junio</option>
+                <option value="Julio">Julio</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Septiembre">Septiembre</option>
+                <option value="Octubre">Octubre</option>
+                <option value="Noviembre">Noviembre</option>
+                <option value="Diciembre">Diciembre</option>
+            </select>
+            <span>de</span>
+            <label for="year"></label>
+            <input type="text" id="year" name="year" value=""><br /><br>
+            <!--- Tema de interés --->
+            <label for="topic">Temas de interés</label><br />
+            <select multiple name="topic[]">
+                <option value="Administración de base de datos">Administración de base de datos</option>
+                <option value="Análisis y programación">Análisis y programación</option>
+                <option value="Arquitectura">Arquitectura</option>
+                <option value="Calidad">Calidad</option>
+                <option value="ERP, CRM, Bussiness Intelligence">ERP, CRM, Bussiness Intelligence</option>
+            </select><br /><br>
+            <!--- Cargar un archivo --->
+            <input type="file" name="file" id=file><br /><br>
+            <input type="submit" name="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+
+</html>

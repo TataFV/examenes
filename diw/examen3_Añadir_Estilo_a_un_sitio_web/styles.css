@@ -1,7 +1,23 @@
 /**********  **********/
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0 auto;
+}
+
+/********** Article  **********/
+section {
+    float: left;
+    height: auto;
+    width: 70%;
+}
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /********** Títulos **********/
@@ -76,8 +92,14 @@ ol#lista2 {
 nav {
     background-color: rgb(251, 0, 100);
     font-size: 2rem;
-    height: 100px;
+    height: 1000px;
     padding: 50px;
+    width: 30%;
+    float: left;
+}
+
+nav ul li {
+    list-style: none;
 }
 
 nav>ul>li>a {

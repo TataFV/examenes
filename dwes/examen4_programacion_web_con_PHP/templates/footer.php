@@ -1,0 +1,1 @@
+Copyritght &copy; <?php echo date("Y")?> DAW

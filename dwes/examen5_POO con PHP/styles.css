@@ -1,0 +1,55 @@
+body {
+    font-family: 'Courier New';
+    font-weight: bolder;
+
+}
+
+.grid_layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid mediumblue;
+}
+
+.user {
+    font-size: 1.2rem;
+    background-color: aliceblue;
+    border: 3px solid mediumblue;
+    border-radius: 6px;
+    text-align: start;
+    margin: 20px;
+    padding: 20px;
+}
+
+.grid_layout_dni {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid mediumblue;
+}
+
+#user_dni {
+    font-size: 1.2rem;
+    background-color: #fbffc3;
+    border: 3px solid #e0af04;
+    border-radius: 6px;
+    margin: 40px;
+    padding: 20px;
+}
+
+h2 {
+    font-family: 'Helvetica';
+    font-size: xx-large;
+    font-weight: bold;
+    color: #87cd00;
+    margin: 2rem;
+    margin-left: 6rem;
+
+
+}

@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "dni": "36231223A",
+        "e-mail": "John@mail.com",
+        "nombre": "john",
+        "apellidos": "Doe"
+    },
+    {
+        "id": 2,
+        "dni": "34321223B",
+        "e-mail": "Olek@gmail.com",
+        "nombre": "Olek",
+        "apellidos": "Andreas"
+    },
+    {
+        "id": 3,
+        "dni": "36231223A",
+        "e-mail": "andres@gmail.com",
+        "nombre": "Andrés",
+        "apellidos": "Frances"
+    },
+    {
+        "id": 4,
+        "dni": "36031425A",
+        "e-mail": "ana@gmail.com",
+        "nombre": "Ana",
+        "apellidos": "Rodriguez"
+    },
+    {
+        "id": 5,
+        "dni": "34341621V",
+        "e-mail": "nerea@gmail.com",
+        "nombre": "Nerea",
+        "apellidos": "Fernández"
+    },
+    {
+        "id": 6,
+        "dni": "36251823Z",
+        "e-mail": "eduardo@gmail.com",
+        "nombre": "Eduardo",
+        "apellidos": "Carrera"
+    }
+]

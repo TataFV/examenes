@@ -4,12 +4,32 @@ Audio: audio sample4.mp3
 
 1.¿Cuánto dura?
 
+$ mplayer sample4.mp3 o ffmpeg -i sample4.mp3
+Duration: 00:04:04.51
+
 2.¿Qué codificación utiliza?
+
+$ mplayer sample4.mp3
+Opening audio decoder: [mpg123] MPEG 1.0/2.0/2.5 layers I, II, III
 
 3.¿Cual es su bitrate?
 
+$ ffmpeg -i sample4.mp3
+Bitrate: 128 kb/s
+
 4.Guárdalo en formato opus
+
+$ ffmpeg -i sample4.mp3 sample4.opus
 
 5.Recorta su duración a la mitad
 
-6.Dividelo en 4 partes iguales.
+$ ffmpeg -i sample4.mp3 -t "124" -c copy output.mp3
+
+6.Dividelo en 4 partes iguales
+
+$ ffmpeg -i sample4.mp3 -segment_time 00:01:01.1275 -f segment sample4_%02d.mp3
+output: 
+sample4_00.mp3
+sample4_01.mp3
+sample4_02.mp3
+sample4_03.mp3

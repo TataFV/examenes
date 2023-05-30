@@ -1,10 +1,28 @@
 Edición de imágenes
 
- Imagen: https://commons.wikimedia.org/wiki/Commons:Picture_of_the_day#/media/File:M%C3%BCnster,_LBS_--_2021_--_9804.jpg 
+Imagen: https://commons.wikimedia.org/wiki/Commons:Picture_of_the_day#/media/File:M%C3%BCnster,_LBS_--_2021_--_9804.jpg 
 
-    1. Guárdala en formato webp.
-    2. Guárdala en jpeg pero al 25% de calidad.
-    3. Recorta la imagen, 500 px por arriba y 500 px por la derecha.
-    4. Rota la imagen 45% a la derecha.
-    5. Añade una marca de agua (arriba a la izquierda) que diga "Foto Examen".
-    6. Transforma la imagen con el filtro "implode".
+1. Guárdala en formato webp.
+
+$ cp 1024px-Munster,_LBS_--_2021_--9804.jpg foto_original.jpg
+$ magick foto_original.jpg foto_webp.WebP
+
+2. Guárdala en jpeg pero al 25% de calidad.
+
+$magick foto_original -resize 25% foto_resize.jpg
+
+3. Recorta la imagen, 500 px por arriba y 500 px por la derecha.
+
+$magick foto_original.jpg -gravity NorthEast -crop 500x500+0+0 +repage foto_crop.jpg
+
+4. Rota la imagen 45% a la derecha.
+
+$magick foto_original -rotate 45 foto_rotate.jpg
+
+5. Añade una marca de agua (arriba a la izquierda) que diga "Foto Examen".
+
+$ magick foto_original.jpg -pointsize 40 -draw "gravity NorthWest fill back text 0,20 'Foto Examen' fill with text 2,22 'Foto Examen'" foto_watermark.jpg 
+
+6. Transforma la imagen con el filtro "implode".
+
+$ magick foto_original.jpg  -implode 4  salida_implode.jpg

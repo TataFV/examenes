@@ -1,0 +1,44 @@
+Edición Video 
+
+Video: sample_640x360.avi
+
+1. ¿Cuánto dura el video y cuántos flujos de audio y video tiene?
+
+$ffmpeg -i sample_640x360.avi
+Duration: 00:00:13.35
+
+Ningún flujo de audio
+AVI: No audio stream found -> no sound
+
+1 flujo de video
+VIDEO:  [FMP4]  640x360  24bpp  29.970 fps  340.5 kbps (41.6 kbyte/s)
+
+$ffmpeg -i sample_640x360.avi
+Stream #0:0 Video: mpeg4 (Simple Profile)
+
+2. Codifícalo en webm
+
+ffmpeg -i sample_640x360.avi -vcodec vp8 video.WebM
+
+3. Extrae sólo el audio del video
+
+El video no contiene ninguna pista de audio, pero el comando sería:
+ffmpeg -i sample_640x360.avi -vn sample_640x360_audio.mp3
+
+4. Recorta la duración del video a la mitad
+
+ffmpeg -i sample_640x360.avi -t "6.12" sample_output.avi
+
+5. Cambia la resolución de imagen del video
+
+Resolución 320x240
+ffmpeg -i sample_640x360.avi -vf scale=320:240 video_320x240.avi
+
+Alto apropiado para que el video no se deforme
+ffmpeg -i sample_640x360.avi-vf scale=320:-1 video_320x180.mp4
+
+La mitad de tamaño tanto de ancho como de alto
+ffmpeg -i sample_640x360.avi-vf scale=iw/2:ih/2 sample_320x180.avi
+
+6. Extrae 8 fotogramas de muestra del video
+ffmpeg -i sample_640x360.avi -vf fps=1 image%d.png

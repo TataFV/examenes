@@ -1,0 +1,10 @@
+Edición de imágenes
+
+ Imagen: https://commons.wikimedia.org/wiki/Commons:Picture_of_the_day#/media/File:M%C3%BCnster,_LBS_--_2021_--_9804.jpg 
+
+    1. Guárdala en formato webp.
+    2. Guárdala en jpeg pero al 25% de calidad.
+    3. Recorta la imagen, 500 px por arriba y 500 px por la derecha.
+    4. Rota la imagen 45% a la derecha.
+    5. Añade una marca de agua (arriba a la izquierda) que diga "Foto Examen".
+    6. Transforma la imagen con el filtro "implode".

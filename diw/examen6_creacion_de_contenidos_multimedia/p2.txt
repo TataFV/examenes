@@ -1,0 +1,15 @@
+Edición Audio
+
+Audio: audio sample4.mp3 
+
+1.¿Cuánto dura?
+
+2.¿Qué codificación utiliza?
+
+3.¿Cual es su bitrate?
+
+4.Guárdalo en formato opus
+
+5.Recorta su duración a la mitad
+
+6.Dividelo en 4 partes iguales.

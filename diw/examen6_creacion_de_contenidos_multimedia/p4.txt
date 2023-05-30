@@ -1,0 +1,11 @@
+Licencias de Uso
+
+Licencia CC BY NC Atribución-NoComercial
+La licencia CC BY NC permite compartir y adaptar el material original, pero bajo dos condiciones: referencia al autor original (BY) y no utilizar el material para una finalidad comercial (NC). 
+El fin de esta licencia es contribuir al acceso a la información por parte del público, pero a su vez reconoce el derecho del autor a defender sus derechos morales y patrimoniales decidiendo sobre su obra.
+Es una licencia muy utilizada en educación, útil para ilustrar presentaciones o trabajos de clase.
+
+Licencia CC SA NC Atribución-CompartirIgual
+La licencia CC SA NC es una licencia similar la licencia CC BY NC ya que permite compartir y adaptar el material original bajo las condiciones de referencia al autor original (BY) y no utilizar el material para una finalidad comercial (NC), pero añade una restricción más, que el resultado de la nueva obra creada a partir del original o las modificaciones realizadas se deben difundir bajo la misma licencia que el original (SA)
+Esta licencia permite que las obras puedan ser usadas como herramienta de aprendizaje, ya que se puede copiar y adaptar el material original, y a su vez asegura su contribución al avance tecnológico bajo el espíritu del código abierto. 
+

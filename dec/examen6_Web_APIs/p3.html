@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Geolocation API in JavaScript</h1>
+    <button id="find-me">Estimar mi posición</button>
+    <p id="status"></p>
+    <a id="map-link" target="_blank"></a>
+    <p id="accuracy"></p>
+    <p id="time"></p>
+    <button id="follow-me">Sígueme</button>
+
+
+    <script>
+        //Función que estima la posición del usuario
+        function geoFindMe() {
+            const status = document.querySelector("#status");
+            const mapLink = document.querySelector("#map-link");
+            const precision = document.querySelector("#accuracy");
+            const fecha = document.querySelector("#time");
+
+
+            //
+            mapLink.href = "";
+            mapLink.textContent = "";
+
+            function success(position) {
+                console.log(position)
+                const latitud = position.coords.latitude;
+                const longitud = position.coords.longitude;
+                const accuracy = position.coords.accuracy;
+
+                const time = position.timestamp;
+                var date = new Date(time);
+                console.log(date.getDate() +
+                    " " + date.getHours() +
+                    ":" + date.getMinutes() +
+                    ":" + date.getSeconds());
+                console.log(position);
+
+                status.textContent = "";
+
+                mapLink.href = `https://www.openstreetmap.org/#map=18/${latitud}/${longitud}`;
+                mapLink.textContent = `Latitud: ${latitud} °, Longitud: ${longitud} °`;
+                precision.textContent = `Precisión: ${accuracy}`;
+                fecha.textContent = `Fecha y hora: ${date}`;
+            }
+
+            function error() {
+                status.textContent = "Unable to retrieve your location";
+            }
+
+            if (!navigator.geolocation) {
+                status.textContent = "Geolocation is not supported by your browser";
+            } else {
+                status.textContent = "Locating…";
+                navigator.geolocation.getCurrentPosition(success, error);
+            }
+        }
+
+
+        document.querySelector("#find-me").addEventListener("click", geoFindMe);
+        document.getElementById("follow-me").addEventListener('click', geoFollowMe);
+        //Captura tu posición cada 10 segundos
+        setInterval(geoFollowMe, 10000);
+
+        //Crea una lista ordenada
+        const ol = document.createElement("ol");
+        document.querySelector("body").appendChild(ol);
+
+        //Función que sigue al usuario
+        function geoFollowMe() {
+            const options = {
+                //Precisión
+                enableHightAccuracy: true,
+                //Tiempo para que devuelva la posición
+                timeout: 5000,
+                //Tiempo en caché
+                maximumAge: 0
+            }
+
+            const getPosition = (position) => {
+
+                var li = document.createElement("li");
+
+                //Momento en que la localización ha sido recuperada.
+                const time = position.timestamp;
+                var date = new Date(time);
+                var fecha = date.getHours() +
+                    ":" + date.getMinutes() +
+                    ":" + date.getSeconds() + " " + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+
+                //Muestra las coordenadas, altitud y precisión
+                li.textContent = `Latitud: ${position.coords.latitude} °, Longitud: ${position.coords.longitude} °,  Accuracy: ${position.coords.accuracy}°, Fecha: ${fecha}`;
+
+                console.log(date);
+
+                ol.appendChild(li);
+
+
+                const status = document.querySelector("#status");
+                status.textContent = "";
+                console.log(position)
+            }
+
+            const error = (error) => console.log(error);
+
+            const geolocation = navigator.geolocation;
+
+            // Método usado para obtener la ubicación actual del dispositivo
+            geolocation.getCurrentPosition(getPosition, error, options);
+
+
+        }
+
+    </script>
+</body>
+
+</html>

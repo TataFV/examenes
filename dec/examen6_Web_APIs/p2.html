@@ -1,15 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web API del sistema</title>
+    <style>
+        h2 {
+            font-size: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        .question {
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-family: sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-
+    <h2>Información del navegador y sistema del usuario</h2>
+    <p class="question">1.¿Cual es la UAS (agente de usuario)?</p>
+    <p>User Agent es una propiedad del objeto Navigator: window.navigator.userAgent</p>
+    <p id="uas"></p>
+    <p class="question">2.¿Cual es el sistema operativo del usuario?</p>
+    <p id="os"></p>
+    <p class="question">3.¿Qué versión de navegador está utilizando (o renderizado HTML)?</p>
+    <p id="browser"></p>
+    <p class="question">4.¿Qué tamaño de memoria tiene el equipo?</p>
+    <p id="deviceMemory"></p>
+    <p class="question"> 5.¿Qué lenguaje es el predeterminado del usuario?</p>
+    <p id="language"></p>
+    <p class="question">6.¿Estás cargando la página online o local (sin conexión)?</p>
+    <p id="conexion"></p>
+    <p class="question">7.¿Se pueden mostrar documentos PDF?</p>
+    <p id="pdf"></p>
+    <p class="question">8.¿Qué porcentaje de batería tiene su sistema?</p>
+    <p id="batteryLevel"></p>
+    <p class="question">9.Si está cargando (o no)</p>
+    <p id="bateryCharging"></p>
+    <p class="question">10.Que no cargue la página, si está por debajo del 25%</p>
+    <p id="bateryCharge25"></p>
+    <script src="visitasUsuario.js"></script>
 </body>
 
 </html>

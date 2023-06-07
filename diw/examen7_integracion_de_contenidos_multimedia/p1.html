@@ -9,7 +9,29 @@
 </head>
 
 <body>
-
+    <h1>Picture of the Day</h1>
+    <!-- 1. Primera imagen en formato jpg, con un ancho fijo de 800 x 600 y un texto descriptivo que diga «Imagen 800x600». Además, pertenecerá a la clase «general» -->
+    <img class="general" src="imags/Tenthredo_scrophulariae_larva_-_Keila_medium.jpg"
+        alt="Tenthredo_scrophulariae_larva" width="800" height="600">
+    <!-- 2.La segunda imagen, mostrará al agente de usuario tres alternativas de formato (webp, jpg y png) y añadirá el título «Revisa el formato de la imagen» -->
+    <picture>
+        <source srcset="imags/Tenthredo_scrophulariae_larva_-_Keila.webp" type=" image/webp" />
+        <source srcset="imags/Tenthredo_scrophulariae_larva_-_Keila.png" type="image/png" />
+        <img src="imags/Tenthredo_scrophulariae_larva_-_Keila_medium.jpg" alt="Tenthredo_scrophulariae_larva" />
+    </picture>
+    <figure>
+        <img src="imags/Tenthredo_scrophulariae_larva_-_Keila_original.jpg" alt="Tenthredo_scrophulariae_larva"
+            width="600" height="400" />
+        <figcaption>Revisa el formato de la imagen</figcaption>
+    </figure>
+    <!-- 3.La tercera imagen, en realidad seleccionará una de entre tres alternativas, según la pantalla (supongamos un criterio por el ancho de pantalla) -->
+    <picture>
+        <source srcset="imags/Tenthredo_scrophulariae_larva_-_Keila_small.jpg" media="(max-width: 350px)" />
+        <source srcset="imags/Tenthredo_scrophulariae_larva_-_Keila_medium.jpg"
+            media="(min-width: 351px);(max-width: 1024px);" />
+        <source srcset="imags/Tenthredo_scrophulariae_larva_-_Keila_original.jpg" media="(min-width: 1025px)" />
+        <img src="imags/Tenthredo_scrophulariae_larva_-_Keila_medium.jpg" alt="Tenthredo_scrophulariae_larva" />
+    </picture>
 </body>
 
 </html>

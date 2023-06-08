@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integración de Varias APIS</title>
+</head>
+
+<body>
+
+    <div id="jokes">
+        <h2>APIChuckNorris</h2>
+        <p> Información adicional &nbsp;&nbsp;<span id="oculta" style="cursor: pointer;">Mostrar/ocultar</span></p>
+        <p id="chuck"></p>
+        <button id="boton">Actualizar Info</button>
+    </div>
+
+    <div id="weather">
+        <h2>APIOpenWeather</h2>
+        <p id="clima"></p>
+        <p id="time"></p>
+        <p id="temp"></p>
+    </div>
+    <script src="APIChuckNorris.js"></script>
+    <script src="APIOpenWeather.js"></script>
+</body>
+
+</html>

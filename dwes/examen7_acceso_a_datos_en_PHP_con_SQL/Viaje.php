@@ -1,6 +1,6 @@
 <?php
 
-#Clase Ciudad
+#Clase Viaje
 #Propiedades: id, idOrigen, idDestino, fechaSalida, fechaLlegada
 
 class Viaje{
